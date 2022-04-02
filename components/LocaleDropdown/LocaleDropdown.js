@@ -9,10 +9,12 @@ import useTranslation from "hooks/useTranslation";
 
 const useStyles = makeStyles((theme) => ({
   localeSelect: {
-    margin: theme.spacing(0, 1)
+    margin: theme.spacing(0, 1),
   },
   localeSelectText: {
-    fontSize: "1rem"
+    fontSize: "1rem",
+    color:"white",
+    borderBottom: `solid 2px ${theme.palette.reaction.white}`,
   }
 }));
 

@@ -13,7 +13,7 @@ const styles = (theme) => ({
     marginTop: "4rem"
   },
   errorMessage: {
-    color: theme.palette.reaction.black65
+    color: theme.palette.reaction.black65,
   },
   errorLink: {
     color: theme.palette.reaction.coolGrey400

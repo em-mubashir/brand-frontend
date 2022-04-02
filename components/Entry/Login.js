@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     "display": "flex",
     "flexDirection": "column",
     "& > *": {
-      margin: theme.spacing(1)
+      margin: theme.spacing(1),
     }
   },
   forgotPassword: {
@@ -28,15 +28,15 @@ const useStyles = makeStyles((theme) => ({
   },
   switchEntryMode: {
     textAlign: "center",
-    textDecoration: "underline",
+    textDecoration: "underline white",
     cursor: "pointer",
     marginTop: theme.spacing(2),
-    marginBottom: theme.spacing(2)
+    marginBottom: theme.spacing(2),
   },
   error: {
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
-    color: red[500],
+    color: "white",
     fontSize: "1.1em",
     textAlign: "center"
   }
@@ -88,21 +88,22 @@ export default function Login(props) {
   };
   return (
     <form className={classes.root} noValidate>
-      <h1>Sign in to your account</h1>
+      <h1 style = {{color:'white'}}>Sign in to your account</h1>
       <FormControl>
-        <InputLabel htmlFor="email">Email</InputLabel>
-        <Input id="email" aria-describedby="email-address" onChange={handleEmailChange} value={email}
+        <InputLabel htmlFor="email" style = {{color:'white'}}>Email</InputLabel>
+        <Input id="email" style = {{color:'white' }} aria-describedby="email-address"  onChange={handleEmailChange} value={email}
           type="email"
         />
       </FormControl>
       <FormControl>
-        <InputLabel htmlFor="password">Password</InputLabel>
+        <InputLabel htmlFor="password" style = {{color:'white'}}>Password</InputLabel>
         <Input
           id="password"
           aria-describedby="password"
           onChange={handlePasswordChange}
           value={password}
           type="password"
+          style = {{color:'white' }}
         />
       </FormControl>
       <div
@@ -111,10 +112,11 @@ export default function Login(props) {
         onKeyDown={handleForgotPasswordClick}
         role="button"
         tabIndex={0}
+        style = {{color:'white'}}
       >
         Forgot Password?
       </div>
-      <Button onClick={registerUser} color="primary" variant="contained" role="button">
+      <Button onClick={registerUser} color="white" variant="contained" role="button">
         Sign In
       </Button>
       {!!error && <div className={classes.error}>{error}</div>}
@@ -124,6 +126,7 @@ export default function Login(props) {
         onKeyDown={handleOpenSignUp}
         role="button"
         tabIndex={0}
+        style = {{color:'white'}}
       >
         Don't have an account? Sign Up
       </div>

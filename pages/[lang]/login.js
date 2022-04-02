@@ -18,7 +18,7 @@ import fetchTranslations from "staticUtils/translations/fetchTranslations";
 
 const styles = (theme) => ({
   backLink: {
-    "color": theme.palette.reaction.black80,
+    "color": theme.palette.reaction.black,
     "cursor": "pointer",
     "fontFamily": theme.typography.fontFamily,
     "fontSize": 14,

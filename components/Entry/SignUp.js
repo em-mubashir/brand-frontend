@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   error: {
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
-    color: red[500],
+    color: "white",
     fontSize: "1.1em",
     textAlign: "center"
   },
@@ -76,26 +76,27 @@ export default function SignUp(props) {
   };
   return (
     <form className={classes.root} noValidate>
-      <h1>Create your account</h1>
+      <h1 style = {{color:'white'}}>Create your account</h1>
       <FormControl>
-        <InputLabel htmlFor="email">Email</InputLabel>
-        <Input id="email" aria-describedby="email-address" onChange={handleEmailChange} value={email}
+        <InputLabel htmlFor="email" style = {{color:'white'}}>Email</InputLabel>
+        <Input id="email" style = {{color:'white' }} aria-describedby="email-address" onChange={handleEmailChange} value={email}
           type="email"
         />
       </FormControl>
       <FormControl>
-        <InputLabel htmlFor="password">Password</InputLabel>
+        <InputLabel htmlFor="password" style = {{color:'white'}}>Password</InputLabel>
         <Input
           id="password"
           aria-describedby="password"
           onChange={handlePasswordChange}
           value={password}
+          style = {{color:'white' }}
           type="password"
         />
       </FormControl>
       <Button
         onClick={registerUser}
-        color="primary"
+        color="white"
         variant="contained"
         className={classes.signUpButton}
         tabIndex="0"
@@ -110,6 +111,7 @@ export default function SignUp(props) {
         onKeyDown={handleOpenLogIn}
         role="button"
         tabIndex={0}
+        style = {{color:'white'}}
       >
         Already have an account? Log In
       </div>

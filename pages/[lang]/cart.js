@@ -21,22 +21,28 @@ import fetchTranslations from "staticUtils/translations/fetchTranslations";
 
 const styles = (theme) => ({
   cartEmptyMessageContainer: {
-    margin: "80px 0"
+    margin: "1px 0",
+  },
+  image: {
+    margin: "7px 0",
+    paddingLeft:"590px",
   },
   checkoutButtonsContainer: {
     backgroundColor: theme.palette.reaction.black02,
     padding: theme.spacing(2)
   },
   customerSupportCopy: {
-    paddingLeft: `${theme.spacing(4)}px !important`
+    paddingLeft: `${theme.spacing(135)}px !important`
   },
   phoneNumber: {
     fontWeight: theme.typography.fontWeightBold
   },
   title: {
-    fontWeight: theme.typography.fontWeightRegular,
+    fontWeight: theme.typography.fontWeightBold,
     marginTop: "1.6rem",
-    marginBottom: "3.1rem"
+    marginBottom: "0.1rem",
+    paddingLeft:"585px",
+
   },
   itemWrapper: {
     borderTop: theme.palette.borders.default,
@@ -106,9 +112,14 @@ class CartPage extends Component {
     }
 
     return (
+      <Grid container spacing={0}>
+        <Grid item xs={12} className={classes.image}>
+        <img src="/images/shopping-cart.png" width="18%"  alt=""/>
+      </Grid>
       <Grid item xs={12} className={classes.cartEmptyMessageContainer}>
         <CartEmptyMessage onClick={this.handleClick} />
-      </Grid>
+      </Grid>    
+    </Grid>
     );
   }
 
@@ -151,7 +162,7 @@ class CartPage extends Component {
           meta={[{ name: "description", content: shop && shop.description }]}
         />
         <section>
-          <Typography className={classes.title} variant="h6" align="center">
+          <Typography className={classes.title} variant="h6">
             Shopping Cart
           </Typography>
           <Grid container spacing={3}>
@@ -159,7 +170,7 @@ class CartPage extends Component {
             {this.renderCartSummary()}
             <Grid className={classes.customerSupportCopy} item>
               <Typography paragraph variant="caption">
-                Have questions? call <span className={classes.phoneNumber}>1.800.555.5555</span>
+                <span className={classes.phoneNumber}>Have questions? call  1.800.555.5555</span>
               </Typography>
               <Typography paragraph variant="caption">
                 <Link href="#">Shipping information</Link>

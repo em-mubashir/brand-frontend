@@ -10,14 +10,21 @@ const styles = (theme) => ({
     alignItems: "center",
     display: "flex",
     justifyContent: "center",
-    marginBottom: theme.spacing(2)
-  }
+    marginTop: theme.spacing(36),
+    marginBottom: theme.spacing(2),
+    backgroundColor: theme.palette.reaction.black,
+    padding:"10px",
+  },
+  title: {
+    fontWeight: theme.typography.fontWeightBold,
+    color:"white",
+  },
 });
 
 const Footer = ({ ...props }) => (
   <footer className={props.classes.footer}>
-    <Typography variant="caption">
-      &copy; {date.getFullYear()} Reaction Commerce
+    <Typography className={props.classes.title} variant="caption">
+      &copy; {date.getFullYear()} E-Commerce
     </Typography>
   </footer>
 );

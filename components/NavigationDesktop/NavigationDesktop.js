@@ -23,7 +23,7 @@ class NavigationDesktop extends Component {
     const { navItems } = this.props;
 
     if (navItems && navItems.items) {
-      return <nav>{navItems.items.map(this.renderNavItem)}</nav>;
+     return <nav>{navItems.items.map(this.renderNavItem)}</nav>;
     }
 
     // If navItems.items aren't available, skip rendering of navigation

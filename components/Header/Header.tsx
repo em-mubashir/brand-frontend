@@ -22,9 +22,9 @@ import type { WithStyles, Theme } from "@material-ui/core";
 const styles = (theme: Theme) =>
   createStyles({
     appBar: {
-      backgroundColor: theme.palette.reaction.white,
+      backgroundColor: theme.palette.reaction.black,
       borderBottom: `solid 1px ${theme.palette.reaction.black05}`,
-      color: theme.palette.reaction.coolGrey500,
+      color: theme.palette.reaction.white,
     },
     controls: {
       alignItems: "inherit",
@@ -32,9 +32,9 @@ const styles = (theme: Theme) =>
       flex: 1,
     },
     title: {
-      color: theme.palette.reaction.reactionBlue,
+      color: theme.palette.reaction.white,
       marginRight: theme.spacing(),
-      borderBottom: `solid 5px ${theme.palette.reaction.reactionBlue200}`,
+      borderBottom: `solid 3px ${theme.palette.reaction.white}`,
     },
     toolbar: {
       alignItems: "center",
@@ -60,15 +60,14 @@ const Header: FC<HeaderProps> = ({ classes, shop, uiStore }) => {
   return (
     <AppBar position="static" elevation={0} className={classes.appBar}>
       <Toolbar className={classes.toolbar}>
-        <Hidden mdUp>
+        <Hidden mdUp >
           <NavigationToggleMobile onClick={handleNavigationToggleClick} />
         </Hidden>
-
         <div className={classes.controls}>
-          <Typography className={classes.title} color="inherit" variant="h6">
+          <Typography className={classes.title} color="white" variant="h6">
             {/* @ts-ignore TODO: Refactor link to address type error */}
             <Link route="/">
-              {shop ? <ShopLogo shopName={shop.name} /> : "Example Storefront"}
+              {shop ? <ShopLogo shopName={shop.name} /> : "my store"}
             </Link>
           </Typography>
 

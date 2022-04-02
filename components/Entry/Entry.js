@@ -12,7 +12,7 @@ const flexWrapper = () => ({
   alignItems: "stretch",
   display: "flex",
   flexDirection: "column",
-  justifyContent: "flex-start"
+  justifyContent: "flex-start",
 });
 
 const styles = (theme) => ({
@@ -22,7 +22,7 @@ const styles = (theme) => ({
     [theme.breakpoints.up("md")]: {
       minHeight: "400px",
       paddingBottom: 0,
-      paddingRight: theme.spacing(8)
+      paddingRight: theme.spacing(8),
     }
   },
   loginButton: {

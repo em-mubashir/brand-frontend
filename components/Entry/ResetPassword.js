@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
   error: {
     marginTop: theme.spacing(2),
-    color: red[500],
+    color: "white",
     fontSize: "1.1em",
     textAlign: "center"
   },
@@ -69,19 +69,19 @@ export default function ResetPassword(props) {
   };
   return (
     <form className={classes.root} noValidate>
-      <h1>Choose a new password</h1>
+      <h1 style = {{color:'white'}}>Choose a new password</h1>
       <FormControl>
-        <InputLabel htmlFor="password">Password</InputLabel>
+        <InputLabel htmlFor="password" style = {{color:'white'}}>Password</InputLabel>
         <Input id="password" aria-describedby="password" onChange={handlePasswordChange} value={password}
           type="password"
         />
       </FormControl>
       {!!error && <div className={classes.error}>{error}</div>}
-      <Button className={classes.resetButton} onClick={resetPassword} color="primary" variant="contained"
+      <Button className={classes.resetButton} onClick={resetPassword} color="white" variant="contained"
         tabIndex="0" role="button"
       >Reset Password</Button>
       <div className={classes.switchEntryMode} onClick={handleOpenForgotPassword} onKeyDown={handleOpenForgotPassword} role="button"
-        tabIndex={0}
+        tabIndex={0} style = {{color:'white'}}
       >Send reset link again</div>
     </form>
   );

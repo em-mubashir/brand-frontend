@@ -20,7 +20,6 @@ export default class App extends NextApp {
 
   render() {
     const { Component, pageProps, ...rest } = this.props;
-
     return (
       <StripeWrapper>
         <ContextProviders pageProps={pageProps}>

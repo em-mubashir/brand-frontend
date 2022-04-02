@@ -6,7 +6,7 @@ import Footer from "components/Footer";
 
 const styles = (theme) => ({
   root: {
-    minHeight: "100vh"
+    minHeight: "90vh"
   },
   main: {
     flex: "1 1 auto",

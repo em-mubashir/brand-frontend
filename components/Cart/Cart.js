@@ -4,7 +4,8 @@ import inject from "hocs/inject";
 import { withStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 
-const styles = () => ({
+const styles = () => (
+  {
   cart: {
     width: "90vw"
   }
@@ -13,7 +14,8 @@ const styles = () => ({
 class Cart extends Component {
   static propTypes = {
     classes: PropTypes.object,
-    uiStore: PropTypes.shape({
+    uiStore: PropTypes.shape(
+      {
       closeCart: PropTypes.func
     }).isRequired
   };

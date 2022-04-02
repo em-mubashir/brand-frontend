@@ -2,7 +2,6 @@ import { useContext, useCallback, useMemo } from "react";
 import { useRouter } from "next/router";
 import Skeleton from "@material-ui/lab/Skeleton";
 import { LocaleContext } from "context/LocaleContext";
-
 /**
  * Gets translations for a given namespace
  *

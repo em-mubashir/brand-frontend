@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   error: {
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
-    color: red[500],
+    color: "white",
     fontSize: "1.1em",
     textAlign: "center"
   },
@@ -65,20 +65,20 @@ export default function ForgotPassword(props) {
   };
   return (
     <form className={classes.root} noValidate>
-      <h1>Forgot password</h1>
+      <h1 style = {{color:'white'}}>Forgot password</h1>
       <FormControl>
-        <InputLabel htmlFor="email">Email</InputLabel>
-        <Input id="email" aria-describedby="email" onChange={handleChangeEmail} value={email}
+        <InputLabel htmlFor="email" style = {{color:'white'}}>Email</InputLabel>
+        <Input id="email" style = {{color:'white' }} aria-describedby="email" onChange={handleChangeEmail} value={email}
           type="email"
         />
       </FormControl>
-      <Button onClick={handleForgotPassword} color="primary" variant="contained" className={classes.sendButton}
+      <Button onClick={handleForgotPassword} color="white" variant="contained" className={classes.sendButton}
         tabIndex="0" role="button"
       >Send link to reset password</Button>
       {!!error && <div className={classes.error}>{error}</div>}
       {!!success && <div className={classes.success}>{success}</div>}
       <div className={classes.switchEntryMode} onClick={handleOpenLogIn} onKeyDown={handleOpenLogIn} role="button"
-        tabIndex={0}
+        tabIndex={0} style = {{color:'white'}}
       >Go to Log In</div>
     </form>
   );

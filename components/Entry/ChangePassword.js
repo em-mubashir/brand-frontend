@@ -16,17 +16,18 @@ const useStyles = makeStyles((theme) => ({
     "display": "flex",
     "flexDirection": "column",
     "& > *": {
-      margin: theme.spacing(1)
+      margin: theme.spacing(1),
     }
   },
   error: {
     marginTop: theme.spacing(2),
-    color: red[500],
+    color: "white",
     fontSize: "1.1em",
-    textAlign: "center"
+    textAlign: "center",
   },
   resetButton: {
-    marginTop: theme.spacing(4)
+    marginTop: theme.spacing(4),
+    backgroundColor: theme.palette.reaction.white,
   }
 }));
 
@@ -60,21 +61,21 @@ export default function ChangePassword(props) {
   };
   return (
     <form className={classes.root} noValidate>
-      <h1>Change password</h1>
+      <h1 style = {{color:'white'}}>Change password</h1>
       <FormControl>
-        <InputLabel htmlFor="old-password">Old Password</InputLabel>
-        <Input id="old-password" aria-describedby="old-password" onChange={handleOldPasswordChange} value={oldPassword}
-          type="password"
+        <InputLabel htmlFor="old-password" style = {{color:'white'}}>Old Password</InputLabel>
+        <Input id="old-password" style = {{color:'white' }}  aria-describedby="old-password" onChange={handleOldPasswordChange} value={oldPassword}
+          type="password" 
         />
       </FormControl>
       <FormControl>
-        <InputLabel htmlFor="new-password">New Password</InputLabel>
-        <Input id="new-password" aria-describedby="new-password" onChange={handleNewPasswordChange} value={newPassword}
-          type="password"
+        <InputLabel htmlFor="new-password" style = {{color:'white'}}>New Password</InputLabel>
+        <Input id="new-password" style = {{color:'white' }} aria-describedby="new-password" onChange={handleNewPasswordChange} value={newPassword}
+          type="password" 
         />
       </FormControl>
       {!!error && <div className={classes.error}>{error}</div>}
-      <Button className={classes.resetButton} onClick={handleChangePassword} color="primary" variant="contained"
+      <Button className={classes.resetButton} onClick={handleChangePassword} color="black" variant="contained"
         tabIndex="0" role="button"
       >Change</Button>
     </form>

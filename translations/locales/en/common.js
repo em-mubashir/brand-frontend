@@ -4,5 +4,5 @@ export default {
   updatedAtDesc: "Newest",
   minPriceAsc: "Price: low to high",
   minPriceDesc: "Price: high to low",
-  products: "Products"
+  products: "Products",
 };

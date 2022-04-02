@@ -22,7 +22,8 @@ const useStyles = makeStyles((theme) => ({
     transform: "translate(-50%, -50%)",
     display: "flex",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    backgroundColor: theme.palette.reaction.black,
   }
 }));
 

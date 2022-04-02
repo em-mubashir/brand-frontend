@@ -17,7 +17,8 @@ import getAccountsHandler from "../../lib/accountsServer.js";
 const useStyles = makeStyles((theme) => ({
   accountDropdown: {
     width: 320,
-    padding: theme.spacing(2)
+    padding: theme.spacing(2),
+    backgroundColor: theme.palette.reaction.black,
   },
   marginBottom: {
     marginBottom: theme.spacing(2)
@@ -84,30 +85,32 @@ const AccountDropdown = () => {
             <Fragment>
               <div className={classes.marginBottom}>
                 <Link href="/profile/address">
-                  <Button color="primary" fullWidth>
+                  <Button color="primary" style = {{color:'white'}} fullWidth>
                     Profile
                   </Button>
                 </Link>
               </div>
               <div className={classes.marginBottom}>
-                <Button color="primary" fullWidth onClick={() => setEntryModal("change-password")}>
+                <Button color="primary" style = {{color:'white'}} fullWidth onClick={() => setEntryModal("change-password")}>
                   Change Password
                 </Button>
               </div>
-              <Button color="primary" fullWidth onClick={handleSignOut} variant="contained">
+              <Button color="white"  fullWidth onClick={handleSignOut} variant="contained">
                 Sign Out
               </Button>
             </Fragment>
           ) : (
             <Fragment>
-              <div className={classes.authContent}>
-                <Button color="primary" fullWidth variant="contained" onClick={() => setEntryModal("login")}>
+              <div className={classes.authContent} >
+                <Button color="black" fullWidth variant="contained" onClick={() => setEntryModal("login")}>
                   Sign In
                 </Button>
               </div>
-              <Button color="primary" fullWidth onClick={() => setEntryModal("signup")}>
+             < div className={classes.authContent} >
+                <Button color="black"  fullWidth variant="contained" onClick={() => setEntryModal("signup")}>
                 Create Account
-              </Button>
+                </Button>
+              </div>
             </Fragment>
           )}
         </div>

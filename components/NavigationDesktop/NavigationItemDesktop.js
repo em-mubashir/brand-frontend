@@ -130,7 +130,7 @@ class NavigationItemDesktop extends Component {
               return (
                 <Grid item key={index}>
                   <MenuList disablePadding>
-                    <MenuItem>
+                    <MenuItem>hello
                       <Link
                         className={navigationItemClassNames}
                         href={this.linkPath(item)}

@@ -10,7 +10,7 @@ class CartToggle extends Component {
 
   render() {
     return (
-      <IconButton color="inherit" onClick={this.props.onClick}>
+      <IconButton color="red" onClick={this.props.onClick}>
         <CartIcon />
       </IconButton>
     );
