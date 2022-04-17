@@ -16,10 +16,14 @@ const styles = (theme) => ({
   profileOrdersList: {},
   profileOrdersPagination: {},
   profileOrdersSelect: {
-    marginBottom: theme.spacing(4)
+    marginBottom: theme.spacing(4),
   },
   profileOrdersTitle: {
-    marginBottom: theme.spacing(4)
+    marginBottom: theme.spacing(2.5),
+    fontWeight: theme.typography.fontWeightBold,
+    marginTop: "3.9rem",
+    paddingLeft:"20px",
+    color: "black",
   }
 });
 

@@ -10,7 +10,7 @@ const styles = (theme) => ({
     alignItems: "center",
     display: "flex",
     justifyContent: "center",
-    marginTop: theme.spacing(36),
+    marginTop: theme.spacing(32),
     marginBottom: theme.spacing(2),
     backgroundColor: theme.palette.reaction.black,
     padding:"10px",

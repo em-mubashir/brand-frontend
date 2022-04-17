@@ -16,7 +16,8 @@ import Link from "components/Link";
 
 const useStyles = makeStyles((theme) => ({
   accountProfileInfoContainer: {
-    marginBottom: theme.spacing(4)
+    marginBottom: theme.spacing(4),
+    Color: theme.palette.reaction.black,
   }
 }));
 
@@ -53,7 +54,7 @@ function ProfileMenu() {
         <AccountProfileInfo viewer={account} />
       </div>
       <div className={classes.inPageMenuItemLink}>
-        <List component="nav">
+        <List component="nav" style={{color: "black"}}>
           {menuItems.map((menuItem, index) => (
             <Link href={menuItem.href} key={menuItem.id || `item-${index}`}>
               <ListItem
@@ -62,7 +63,7 @@ function ProfileMenu() {
                 selected={menuItem.isSelected}
 
               >
-                <ListItemIcon>
+                <ListItemIcon style={{color: "black"}}>
                   {menuItem.icon}
                 </ListItemIcon>
                 <ListItemText primary={menuItem.label} />

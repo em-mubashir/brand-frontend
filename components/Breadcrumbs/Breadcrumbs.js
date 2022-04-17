@@ -108,7 +108,7 @@ class Breadcrumbs extends Component {
 
     return (
       <div className={container}>
-        <Link route="/"><span className={breadcrumbLink}>Home</span></Link>
+        
         {this.renderBreadcrumbs()}
       </div>
     );

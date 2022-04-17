@@ -30,6 +30,7 @@ const styles = (theme: Theme) =>
       alignItems: "inherit",
       display: "inherit",
       flex: 1,
+      color: theme.palette.reaction.white,
     },
     title: {
       color: theme.palette.reaction.white,
@@ -64,10 +65,10 @@ const Header: FC<HeaderProps> = ({ classes, shop, uiStore }) => {
           <NavigationToggleMobile onClick={handleNavigationToggleClick} />
         </Hidden>
         <div className={classes.controls}>
-          <Typography className={classes.title} color="white" variant="h6">
+          <Typography className={classes.title} style={{color:"white"}} variant="h6">
             {/* @ts-ignore TODO: Refactor link to address type error */}
             <Link route="/">
-              {shop ? <ShopLogo shopName={shop.name} /> : "my store"}
+              {shop ? <ShopLogo shopName={shop.name} /> : "My store"}
             </Link>
           </Typography>
 

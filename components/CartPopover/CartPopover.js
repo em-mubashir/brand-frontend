@@ -10,26 +10,7 @@ import CheckoutButtons from "components/CheckoutButtons";
 
 
 const styles = (theme) => ({
-  container: {
-    "alignItems": "center",
-    "backgroundColor": theme.palette.reaction.white,
-    "boxShadow": theme.boxShadow.depth2,
-    "display": "flex",
-    "marginLeft": "auto",
-    "marginRight": "auto",
-    "maxWidth": "400px",
-    "paddingTop": "12px",
-    "position": "fixed",
-    "right": 0,
-    "top": 0,
-    "transitionDuration": "400ms",
-    "transitionProperty": "transform",
-    "transitionTimingFunction": "linear",
-    "zIndex": theme.zIndex.appBar + 1,
-    "&:hover": {
-      transform: "translate(0px, 0px)"
-    }
-  },
+ 
   gridContainer: {
     padding: "10px"
   },

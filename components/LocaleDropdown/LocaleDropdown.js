@@ -10,6 +10,7 @@ import useTranslation from "hooks/useTranslation";
 const useStyles = makeStyles((theme) => ({
   localeSelect: {
     margin: theme.spacing(0, 1),
+    color:"white",
   },
   localeSelectText: {
     fontSize: "1rem",

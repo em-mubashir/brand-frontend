@@ -11,8 +11,13 @@ import ErrorPage from "../../pages/_error";
 
 const styles = (theme) => ({
   profileAddressBookTitle: {
-    marginBottom: theme.spacing(4)
-  }
+    marginBottom: theme.spacing(2.5),
+      fontWeight: theme.typography.fontWeightBold,
+      marginTop: "3.9rem",
+      paddingLeft:"20px",
+  
+    },
+  
 });
 
 class ProfileAddressBook extends Component {
@@ -44,7 +49,6 @@ class ProfileAddressBook extends Component {
     const accountAddressBook = {
       addressBook: addresses
     };
-
     return (
       <AddressBook
         account={accountAddressBook}
@@ -61,8 +65,8 @@ class ProfileAddressBook extends Component {
     if (account && !account._id) return <ErrorPage shop={shop} subtitle="Not Found" />;
 
     return (
-      <Grid className={classes.profileAddressBookContainer} container>
-        <Grid className={classes.profileAddressBookTitle} item xs={12} md={12}>
+      <Grid className={classes.profileAddressBookContainer}  container>
+        <Grid className={classes.profileAddressBookTitle} item xs={12} md={12}  style={{color: "black"}}>
           <Typography variant="h6">Address Book</Typography>
         </Grid>
         {this.renderAddressBook()}
