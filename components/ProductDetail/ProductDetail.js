@@ -233,7 +233,7 @@ class ProductDetail extends Component {
           </div>
 
           <div className={classes.section}>
-            <VariantList
+            {/*<VariantList
               onSelectOption={this.handleSelectOption}
               onSelectVariant={this.handleSelectVariant}
               product={product}
@@ -241,7 +241,7 @@ class ProductDetail extends Component {
               selectedVariantId={pdpSelectedVariantId}
               currencyCode={currencyCode}
               variants={product.variants}
-            />
+      />*/}
             <ProductDetailAddToCart
               onClick={this.handleAddToCartClick}
               selectedOptionId={pdpSelectedOptionId}
@@ -260,9 +260,9 @@ class ProductDetail extends Component {
     return (
       <Fragment>
         <Grid container spacing={5}>
-          <Grid item className={classes.breadcrumbGrid} xs={12}>
+        {/*  <Grid item className={classes.breadcrumbGrid} xs={12}>
             <Breadcrumbs isPDP tagId={routingStore.tagId} product={product} />
-          </Grid>
+          </Grid>*/}
           <Grid item xs={12} sm={6}>
             <div className={classes.section}>
               <MediaGallery mediaItems={pdpMediaItems} />
@@ -280,7 +280,7 @@ class ProductDetail extends Component {
             <div className={classes.info}>
               <ProductDetailDescription>{product.description}</ProductDetailDescription>
             </div>
-            <VariantList
+            {/*<VariantList
               onSelectOption={this.handleSelectOption}
               onSelectVariant={this.handleSelectVariant}
               product={product}
@@ -288,7 +288,7 @@ class ProductDetail extends Component {
               selectedVariantId={pdpSelectedVariantId}
               currencyCode={currencyCode}
               variants={product.variants}
-            />
+        />*/}
             <ProductDetailAddToCart
               onClick={this.handleAddToCartClick}
               selectedOptionId={pdpSelectedOptionId}

@@ -111,7 +111,7 @@ class OrderCardFulfillmentGroup extends Component {
               <Grid item xs={6}>
                 <Typography className={classes.fulfillmentGroupCount} variant="subtitle1">Shipment {currentGroupCount} of {totalGroupsCount}</Typography>
               </Grid>
-              <Grid item xs={6} className={classes.fulfillmentGroupHeaderRightColumn}>
+             {/*<Grid item xs={6} className={classes.fulfillmentGroupHeaderRightColumn}>
                 {fulfillmentGroup.tracking ?
                   <Button
                     className={classes.trackShipmentButton}
@@ -131,7 +131,7 @@ class OrderCardFulfillmentGroup extends Component {
                     No tracking available
                   </Button>
                 }
-              </Grid>
+              </Grid>*/}
             </Grid>
           </header>
           {this.renderItems()}
