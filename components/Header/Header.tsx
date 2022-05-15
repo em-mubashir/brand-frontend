@@ -68,16 +68,16 @@ const Header: FC<HeaderProps> = ({ classes, shop, uiStore }) => {
           <Typography className={classes.title} style={{color:"white"}} variant="h6">
             {/* @ts-ignore TODO: Refactor link to address type error */}
             <Link route="/">
-              {shop ? <ShopLogo shopName={shop.name} /> : "My store"}
+              {shop ? shop.name : "My store"}
             </Link>
           </Typography>
-
+            {/*
           <Hidden smDown initialWidth={"md"}>
             <NavigationDesktop />
-          </Hidden>
+            </Hidden>*/}
         </div>
 
-        <LocaleDropdown />
+         {/*<LocaleDropdown />*/}
 
         <AccountDropdown />
         <MiniCart />

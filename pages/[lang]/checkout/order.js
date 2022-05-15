@@ -19,7 +19,8 @@ const styles = (theme) => ({
     marginBottom: theme.spacing(3)
   },
   title: {
-    marginBottom: theme.spacing(3)
+    marginBottom: theme.spacing(17)
+
   }
 });
 
@@ -55,7 +56,7 @@ class CheckoutComplete extends Component {
           <div className={classes.checkoutContentContainer}>
             <div className={classes.orderDetails}>
               <section className={classes.section}>
-                <Typography className={classes.title} variant="h6">Order not found</Typography>
+                <Typography className={classes.title} variant="h6" style={{color:'#000',textAlign:'center'}}>Order Not Found</Typography>
               </section>
             </div>
           </div>

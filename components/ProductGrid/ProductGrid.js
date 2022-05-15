@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
 import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
 import CatalogGrid from "@reactioncommerce/components/CatalogGrid/v1";
 import PageLoading from "components/PageLoading";
@@ -61,6 +62,14 @@ class ProductGrid extends Component {
 
     return (
       <Fragment>
+         <Grid container spacing={12}>
+        <Grid item xs={12} >
+        <img src="/images/ban.png" width="100%"  alt=""/>
+        <Typography  variant="h4" style = {{color:'#000',paddingLeft:'540px',fontWeight:'Bold',marginTop: '3rem'}} >
+            New Arrival
+          </Typography>
+      </Grid>
+      </Grid>
         <Grid container spacing={3}>
           <CatalogGrid
             products={products}
@@ -68,6 +77,29 @@ class ProductGrid extends Component {
             {...this.props}
           />
         </Grid>
+        <Grid container spacing={12}>
+        <Grid item xs={6} >
+          <br></br>
+          <br></br>
+          <br></br>
+        <img src="/images/about.jpg" width="90%" marginTop="3rem"  alt=""/>
+      </Grid>
+      <Grid item xs={5} >
+      <Typography  variant="h6"style = {{color:'#000',fontWeight:'Bold',Size:'36px',marginTop: '3rem'}}  >
+      About us
+            </Typography>
+            <Typography style = {{color:'#000',Size:'0.5rem'}} >
+            <p>As the global economic recession continues,the coonsumption of second-hand clothing has received considerable attension among consumers across the globe.This has resulted in the development of various departmental stores,weekend markets,and garage sales where people may buy second-hand products including clothing.This has resulted in the development of various departmental stores,weekend markets,and garage sales where people may buy second-hand products including clothing.As the global economic recession continues,the coonsumption of second-hand clothing has received considerable attension among consumers across the globe. </p>
+            </Typography>
+      </Grid>
+      </Grid>
+        <Grid item xs={12} >
+        <br></br>
+          <br></br>
+          <br></br>
+        <img src="/images/final.jpg" width="100%" height="50%"  alt=""/>
+        </Grid>
+       
         {pageInfo && <PageStepper pageInfo={pageInfo} />}
       </Fragment>
     );

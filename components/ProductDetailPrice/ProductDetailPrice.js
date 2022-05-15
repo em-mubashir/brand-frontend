@@ -13,11 +13,13 @@ const styles = (theme) => ({
   },
   priceInline: {
     display: "inline-block",
-    fontWeight: theme.typography.fontWeightMedium
+    fontWeight: theme.typography.fontWeightBold,
+    
   },
   compareAtPriceInline: {
     display: "inline-block",
-    paddingLeft: "0.5rem"
+    paddingLeft: "0.5rem",
+    
   },
   strike: {
     textDecoration: "line-through"
@@ -78,8 +80,8 @@ class ProductDetailPrice extends Component {
 
     return (
       <Grid className={classnames(classes.root, className)} item sm={12}>
-        <Typography className={classes.strike} variant="caption">{compareAtPrice}</Typography>
-        <Typography component="div" variant="h6">{price}</Typography>
+        <Typography className={classes.strike}  variant="h6" color="black">{compareAtPrice}</Typography>
+        <Typography component="div" variant="h5" color="black">{price}</Typography>
       </Grid>
     );
   }

@@ -20,7 +20,7 @@ class ProductDetailVendor extends Component {
     if (!children) return null;
 
     return (
-      <Typography component="div" {...props}>{children}</Typography>
+      <Typography component="div" variant="h6" color="#000000" {...props}>{children}</Typography>
     );
   }
 }

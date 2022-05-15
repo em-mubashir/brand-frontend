@@ -20,7 +20,7 @@ const styles = (theme) => ({
     "padding": theme.spacing(2),
     "&:hover": {
       border: "1px solid",
-      borderColor: theme.palette.reaction.activeElementBorderColor,
+      borderColor: theme.palette.reaction.black,
       backgroundColor: theme.palette.primary.contrastText
     },
     "&:focus": {
@@ -29,7 +29,7 @@ const styles = (theme) => ({
   },
   activeVariant: {
     border: "1px solid",
-    borderColor: theme.palette.reaction.activeElementBorderColor
+    borderColor: theme.palette.reaction.black
   },
   soldOutVariant: {
     opacity: 0.2

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import PropTypes from "prop-types";
 import Button from "@reactioncommerce/components/Button/v1";
 import Router from "translations/i18nRouter";
@@ -41,15 +42,19 @@ export default class CheckoutButtons extends Component {
     } = this.props;
 
     return (
-      <Button
-        actionType="important"
+      
+      <Button 
+       
         className={primaryClassName}
         isDisabled={isDisabled}
         isFullWidth
         onClick={this.handleOnClick}
+        style = {{color:'white',backgroundColor:'#000000'}}
+        
       >
         {primaryButtonText}
       </Button>
+     
     );
   }
 }

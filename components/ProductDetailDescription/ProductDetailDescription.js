@@ -20,7 +20,7 @@ class ProductDetailDescription extends Component {
     if (!children) return null;
 
     return (
-      <Typography component="div" {...props}>{children}</Typography>
+      <Typography component="div"  color="black" {...props}>{children}</Typography>
     );
   }
 }

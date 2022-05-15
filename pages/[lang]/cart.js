@@ -22,10 +22,11 @@ import fetchTranslations from "staticUtils/translations/fetchTranslations";
 const styles = (theme) => ({
   cartEmptyMessageContainer: {
     margin: "1px 0",
+    
   },
   image: {
     margin: "7px 0",
-    paddingLeft:"590px",
+    paddingLeft:"550px",
   },
   checkoutButtonsContainer: {
     backgroundColor: theme.palette.reaction.black02,
@@ -41,12 +42,14 @@ const styles = (theme) => ({
     fontWeight: theme.typography.fontWeightBold,
     marginTop: "1.6rem",
     marginBottom: "0.1rem",
-    paddingLeft:"585px",
+    paddingLeft:"540px",
 
   },
   itemWrapper: {
     borderTop: theme.palette.borders.default,
-    borderBottom: theme.palette.borders.default
+    borderBottom: theme.palette.borders.default,
+    backgroundColor: theme.palette.reaction.black02,
+    fontWeight: theme.typography.fontWeightBold,
   }
 });
 
@@ -140,7 +143,9 @@ class CartPage extends Component {
             itemsQuantity={cart.totalItemQuantity}
           />
           <div className={classes.checkoutButtonsContainer}>
-            <CheckoutButtons />
+            <CheckoutButtons
+            
+             />
           </div>
         </Grid>
       );

@@ -25,15 +25,15 @@ class ProductDetailTitle extends Component {
     variant: PropTypes.string
   }
   render() {
-    const { pageTitle, title, variant = "h3" } = this.props;
+    const { pageTitle, title, variant = "h4" } = this.props;
 
     // Render nothing if neither the title nor pageTitle exists
     if (!title && !pageTitle) return null;
 
     return (
       <Grid item sm={12}>
-        {title && <Typography color="textSecondary" gutterBottom={true} variant={variant}>{title}</Typography>}
-        {pageTitle && <Typography color="primary" component="h2" variant="h6">{pageTitle}</Typography>}
+        {title && <Typography color="black" gutterBottom={true} variant={variant}>{title}</Typography>}
+        {pageTitle && <Typography color="black" component="h2" variant="h6">{pageTitle}</Typography>}
       </Grid>
     );
   }

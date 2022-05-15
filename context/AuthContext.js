@@ -43,8 +43,10 @@ export const AuthProvider = ({ children }) => {
       account,
       setAccount,
       isAuthenticated: !!accountId
+      
     }}
     >
+      
       {children}
     </AuthContext.Provider>
   );

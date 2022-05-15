@@ -26,7 +26,9 @@ const styles = (theme) => ({
     }
   },
   loginButton: {
-    marginTop: theme.spacing(3)
+    marginTop: theme.spacing(3),
+
+
   },
   guestWrapper: {
     ...flexWrapper(),
@@ -49,14 +51,14 @@ const Entry = (props) => {
     <Grid container>
       <Grid item xs={12} md={7}>
         <div className={classes.loginWrapper}>
-          <Typography variant="h6" gutterBottom>
+          <Typography variant="h6" style = {{color:'#000' }}  gutterBottom>
             Returning Customer
           </Typography>
           <Button
             onClick={() => setEntryModal("login")}
-            actionType="important"
             isFullWidth
             className={classes.loginButton}
+            style = {{color:'white',backgroundColor:'#000000'}}
           >
             Login
           </Button>
@@ -64,7 +66,8 @@ const Entry = (props) => {
             onClick={() => setEntryModal("signup")}
             actionType="secondary"
             isFullWidth
-            className={classes.loginButton}
+            
+            
           >
             Create a new accounts
           </Button>
@@ -72,7 +75,7 @@ const Entry = (props) => {
       </Grid>
       <Grid item xs={12} md={5}>
         <div className={classes.guestWrapper}>
-          <Typography variant="h6" gutterBottom>
+          <Typography variant="h6" style = {{color:'#000'}}  gutterBottom>
             Guest Checkout
           </Typography>
           <GuestForm onSubmit={setEmailOnAnonymousCart} />

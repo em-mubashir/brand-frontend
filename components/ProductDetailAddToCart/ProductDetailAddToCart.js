@@ -55,7 +55,7 @@ const styles = (theme) => ({
     fontSize: "18px"
   },
   quantityTypography: {
-    color: theme.palette.reaction.coolGray500,
+    color: theme.palette.reaction.black,
     marginBottom: theme.spacing(2)
   }
 });
@@ -253,7 +253,7 @@ class ProductDetailAddToCart extends Component {
             <Button
               onClick={this.handleOnClick}
               variant="contained"
-              color="primary"
+              color="secondary"
               disableElevation
             >
               <Typography className={addToCartText} component="span" variant="body1">

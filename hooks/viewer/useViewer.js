@@ -25,6 +25,7 @@ export default function useViewer() {
       return;
     }
     setAccount(viewer);
+    
   }, [viewer]);
 
   return [

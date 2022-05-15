@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "1440px",
     alignSelf: "center",
     [theme.breakpoints.up("md")]: {
-      paddingRight: "2rem"
+      paddingRight: "4rem"
     }
   },
   cartSummary: {
@@ -43,31 +43,34 @@ const useStyles = makeStyles((theme) => ({
   checkoutContent: {
     flex: "1",
     maxWidth: theme.layout.mainContentMaxWidth,
-    padding: "1rem",
+    padding: "3rem",
     [theme.breakpoints.down("md")]: {
       maxWidth: "100%"
     }
   },
   checkoutContentContainer: {
     display: "flex",
-    justifyContent: "center"
+    justifyContent: "center",
+    
   },
 
   flexContainer: {
     display: "flex",
-    flexDirection: "column"
+    flexDirection: "column",
+  
   },
   emptyCartContainer: {
     display: "flex",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
   },
   emptyCart: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     width: 320,
-    height: 320
+    height: 420,
+    
   },
   logo: {
     color: theme.palette.reaction.reactionBlue,
@@ -137,7 +140,7 @@ const Checkout = ({ router }) => {
         <div className={classes.emptyCartContainer}>
           <div className={classes.emptyCart}>
             <div>
-              <CartEmptyMessage onClick={() => Router.push("/")} messageText="Your cart is empty." buttonText="Go to main page" />
+              <CartEmptyMessage onClick={() => Router.push("/")} messageText="Your cart is empty." buttonText="Go to main page"  />
             </div>
           </div>
         </div>

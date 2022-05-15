@@ -28,7 +28,7 @@ const styles = ({ palette, zIndex }) => ({
     alignItems: "center",
     width: 360,
     height: 320,
-    border: palette.borders.default
+    border: palette.borders.default,
   },
   badge: {
     width: 20,
@@ -148,7 +148,8 @@ class MiniCart extends Component {
     return (
       <div className={classes.emptyCart}>
         <div>
-          <CartEmptyMessage onClick={this.handleClick} />
+          <CartEmptyMessage 
+          onClick={this.handleClick} />
         </div>
       </div>
     );
@@ -171,7 +172,7 @@ class MiniCart extends Component {
               ? (
                 <Badge
                   badgeContent={cart.totalItemQuantity}
-                  color="primary"
+                  color="white"
                   classes={{ badge: classes.badge }}
                 >
                   <CartIcon />
